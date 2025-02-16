@@ -1,5 +1,6 @@
 package org.mock.service;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mock.DataProvider;
@@ -8,6 +9,7 @@ import org.mock.persistence.entity.repository.PlayerRepositoryImpl;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
@@ -23,6 +25,12 @@ public class PlayerServiceImplTest {
 
     @InjectMocks
     private PlayerServiceImpl playerService;
+
+//    Esta forma se reemplazó por la anotación @ExtendWith(MockitoExtension.class) sobre la clase
+//    @BeforeEach
+//    void init(){
+//        MockitoAnnotations.openMocks(this);
+//    }
 
     @Test
     public void testFindAll(){

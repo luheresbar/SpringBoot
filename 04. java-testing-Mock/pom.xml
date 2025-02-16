@@ -42,6 +42,7 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                        <!-- Configuration to exclude directories -->
                     </execution>
                     <execution>
                         <id>report</id>
